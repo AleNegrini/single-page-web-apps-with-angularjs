@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" ng-app="myFirstApp">
+<html ng-app="myFirstApp">
   <head>
     <meta charset="utf-8">
     <script src="angular.min.js"></script>
@@ -8,8 +8,16 @@
   </head>
   <body>
     <h1>My first AngularJS App</h1>
-    <div ng-controller="myFirstController">
-      <input text="text" ng-model="name"><br/>
+    <div ng-controller="MyFirstController">
+
+      <!-- Display variable -->
+      {{name}}
+      <br/>
+      <!-- Display Function result-->
+      {{sayHello()}}
+      <br/>
+      <!-- Bind value to HTML component -->
+      <input type="text" ng-model="name">
       Inside my input is: {{name}}
     </div>
   </body>
