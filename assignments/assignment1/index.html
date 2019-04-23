@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Lunch Checker - mod1 </title>
+  </head>
+  <body>
+    <h1>Lunch Checker</h1>
+    <div ng-controller='LunchCheckController'>
+      <div>
+        Insert your lunch (elements should be separated by a comma)
+        <br/>
+        <input type="text" ng-model="lunchListStr" ng-trim="true"/>
+        <!-- Empty items checks have been implemented-->
+        <button type="button" ng-click="lunchChecker();">Check If Too Much</button>
+        <br/>
+        <span ng-style="myStyle">{{lunchEsit}}</span>
+        <pre>{{myStyle}}</pre>
+      </div>
+    </div>
+  </body>
+</html>
